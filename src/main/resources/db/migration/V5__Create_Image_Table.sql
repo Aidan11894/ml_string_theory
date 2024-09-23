@@ -1,0 +1,6 @@
+CREATE TABLE Image (
+    Id UUID PRIMARY KEY,
+    RunId UUID REFERENCES Run(Id) ON DELETE CASCADE,
+    ImagePath VARCHAR(255),
+    Timestamp TIMESTAMPTZ
+);

@@ -1,0 +1,6 @@
+CREATE TABLE Hyperparameter (
+    Id UUID PRIMARY KEY,
+    RunId UUID REFERENCES Run(Id) ON DELETE CASCADE,
+    Name VARCHAR(255),
+    Value VARCHAR(255)
+);
